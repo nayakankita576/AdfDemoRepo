@@ -1,0 +1,22 @@
+{
+	"name": "copy2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_copydata",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "sink",
+				"container": "ankitacontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
