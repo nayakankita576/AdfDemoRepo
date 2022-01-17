@@ -1,0 +1,36 @@
+{
+	"name": "Output_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_ankita_covid",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "country_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "country_name",
+				"type": "varchar"
+			},
+			{
+				"name": "region_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "update_date",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "cnt"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,36 @@
+{
+	"name": "AzureSqlTable_partition_input",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_ankita_covid",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Country_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Country_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Region_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Update_date",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Countries"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

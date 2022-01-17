@@ -1,0 +1,17 @@
+{
+	"name": "RahullocalServer",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=BTECH1828088\\RAHULDB;initial catalog=sap",
+			"userName": "BTECH1828088\\KIIT",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxMDMzMTA2Ni03MWZiLTQ2YTktOTQ5OS1hZTU3YTZiZjVkYmIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime-rahul",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

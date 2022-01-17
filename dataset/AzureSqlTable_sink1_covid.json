@@ -1,0 +1,42 @@
+{
+	"name": "AzureSqlTable_sink1_covid",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_ankita_covid",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Location",
+				"type": "varchar"
+			},
+			{
+				"name": "Confirmed",
+				"type": "varchar"
+			},
+			{
+				"name": "NewCases",
+				"type": "varchar"
+			},
+			{
+				"name": "Deaths",
+				"type": "varchar"
+			},
+			{
+				"name": "casedate",
+				"type": "varchar"
+			},
+			{
+				"name": "filename",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "badcoviddata"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

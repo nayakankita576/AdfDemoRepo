@@ -1,0 +1,132 @@
+{
+	"name": "copy_tbl_blob_to_Azuredb",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_data_blob_to_azuredb",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "ankitacontainer//Covid19.csv"
+					},
+					{
+						"name": "Destination",
+						"value": ".Azure Blob Storage file"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Location",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Location",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Confirmed",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Confirmed",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Cases per 1M people",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Cases per 1M people",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "New Cases",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "New Cases",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Deaths",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Deaths",
+									"type": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_40s",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_40s",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "Ankita"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-01-11T05:25:07Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

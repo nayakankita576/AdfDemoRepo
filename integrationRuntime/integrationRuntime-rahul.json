@@ -1,0 +1,6 @@
+{
+	"name": "integrationRuntime-rahul",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

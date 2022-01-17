@@ -1,0 +1,24 @@
+{
+	"name": "AzureSqlTablestg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseTej",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Table_NAME": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"table": {
+				"value": "@dataset().Table_NAME",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

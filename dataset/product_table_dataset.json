@@ -1,0 +1,40 @@
+{
+	"name": "product_table_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_celebal",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "p_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "p_name",
+				"type": "varchar"
+			},
+			{
+				"name": "p_price",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "filename",
+				"type": "varchar"
+			},
+			{
+				"name": "saledate",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_product"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

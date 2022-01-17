@@ -1,0 +1,32 @@
+{
+	"name": "box2table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RahullocalServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "l",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "b",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "l_date",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "box2"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

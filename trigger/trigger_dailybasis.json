@@ -1,0 +1,24 @@
+{
+	"name": "trigger_dailybasis",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2022-01-08T10:56:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

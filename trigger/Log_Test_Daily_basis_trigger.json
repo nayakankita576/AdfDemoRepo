@@ -1,0 +1,24 @@
+{
+	"name": "Log_Test_Daily_basis_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Log_pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2022-01-11T06:33:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

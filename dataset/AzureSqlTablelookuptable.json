@@ -1,0 +1,13 @@
+{
+	"name": "AzureSqlTablelookuptable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseTej",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,36 @@
+{
+	"name": "SourceDataset_w16",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "local_sql_server",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "emp_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "salary",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "joining_date",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "st",
+			"table": "employee"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

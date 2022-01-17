@@ -1,0 +1,17 @@
+{
+	"name": "DestinationDataset_ow7",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDB_Selfhost",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "student2"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

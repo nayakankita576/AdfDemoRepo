@@ -1,0 +1,31 @@
+{
+	"name": "SourceDataset_ow7",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ankitaSqlServer_selfhostedIR",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "std_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "admission_date",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "student2"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

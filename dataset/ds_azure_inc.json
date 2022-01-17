@@ -1,0 +1,71 @@
+{
+	"name": "ds_azure_inc",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "inc_linkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"schema": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SRC_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SRC_tab",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DST_tab",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cols",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WatermarkColumn",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WatermarkValue",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Enabled",
+				"type": "bit"
+			},
+			{
+				"name": "Load_type",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

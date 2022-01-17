@@ -1,0 +1,24 @@
+{
+	"name": "event_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/ankitacontainer/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/954c68d7-179d-482d-9c3a-182dc0c36173/resourceGroups/PrasunCelebal/providers/Microsoft.Storage/storageAccounts/commoncelebal",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

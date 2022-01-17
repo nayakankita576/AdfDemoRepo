@@ -1,0 +1,53 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_linkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"schemaname": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "AGENT_CODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AGENT_NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WORKING_AREA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COMMISSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PHONE_NO",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().schemaname",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

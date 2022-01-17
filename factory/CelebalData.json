@@ -1,0 +1,9 @@
+{
+	"name": "CelebalData",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5592ae5e-0cb9-4bca-afcf-2a700249834c",
+		"tenantId": "2752b118-c545-4b12-a906-b4fa701b708b"
+	}
+}

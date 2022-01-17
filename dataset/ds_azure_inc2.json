@@ -1,0 +1,13 @@
+{
+	"name": "ds_azure_inc2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "inc_linkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

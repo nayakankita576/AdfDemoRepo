@@ -1,0 +1,16 @@
+{
+	"name": "AzureSqlTableincrement",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseTej",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Tejendra"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

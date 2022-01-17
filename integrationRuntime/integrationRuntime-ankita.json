@@ -1,0 +1,7 @@
+{
+	"name": "integrationRuntime-ankita",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "self hosted-IR Demo"
+	}
+}

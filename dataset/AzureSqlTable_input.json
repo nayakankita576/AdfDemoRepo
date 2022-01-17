@@ -1,0 +1,36 @@
+{
+	"name": "AzureSqlTable_input",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_ankita_covid",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "emp_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "salary",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "joining_date",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "st",
+			"table": "employee"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

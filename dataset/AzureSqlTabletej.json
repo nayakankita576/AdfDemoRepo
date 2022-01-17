@@ -1,0 +1,34 @@
+{
+	"name": "AzureSqlTabletej",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseTej",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Schema_Name": {
+				"type": "String"
+			},
+			"Table_Name": {
+				"type": "String"
+			}
+		},
+		"folder": {
+			"name": "Tejendra"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().Schema_Name",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().Table_Name",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

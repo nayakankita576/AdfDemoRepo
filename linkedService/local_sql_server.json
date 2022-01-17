@@ -1,0 +1,17 @@
+{
+	"name": "local_sql_server",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=DESKTOP-SL127RP\\SQLEXPRESS;initial catalog=celebal",
+			"userName": "DESKTOP-SL127RP\\Ankita Nayak",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwMjdmMmEzNy0wYjIzLTQ0OTAtYWQ1Yy02MmQwYWIxNjI0ZTQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime-ankita",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

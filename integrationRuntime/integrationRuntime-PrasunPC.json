@@ -1,0 +1,7 @@
+{
+	"name": "integrationRuntime-PrasunPC",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "Linking prasun'pc to cloud via self hosted integration Runtime"
+	}
+}
